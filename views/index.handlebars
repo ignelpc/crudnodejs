@@ -1,0 +1,29 @@
+<div>
+    <h2>Usuários</h2>
+    <div class="table-responsive">
+        <table class="table table-sm table-bordered table-striped">
+            <thead class="thead-dark" align="center">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Acções</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                {{#data}}
+                <tr>
+                    <th>{{id}}</th>
+                    <td>{{nome}}</td>
+                    <td>{{email}}</td>
+                    <td align="center">
+                        <a href='atualizar/{{id}}' class="btn btn-warning">Editar</a>
+                        <a href='eliminar/{{id}}' class="btn btn-danger eliminar">Eliminar</a>
+                    </td>
+                </tr>
+                {{/data}}
+            </tbody>
+        </table>
+    </div>
+    <a href="inserir" class="btn btn-primary">Cadastrar</a> <br>
+</div>
